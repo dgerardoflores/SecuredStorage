@@ -18,16 +18,12 @@ class Crypto {
     }
 
     static decrypt(value, key) {
-        //from base64 to byteArray
         let decodedAsBase64Value = Buffer.from(value, 'base64');
         let decodedAsBase64Key = Buffer.from(key);
-        //get IV from message
         let ivArr = decodedAsBase64Value.slice(0, ivLength);
-        //get crypted message from second part of message
         let cipherTextArr = decodedAsBase64Value.slice(ivLength, decodedAsBase64Value.length);
 
-        let cipher = crypto.createDecipheriv(algorithm, decodedAsBase64Key, ivArr);
-        //decrypted value
+        let cipher = CryptoUtils.createDecipheriv(algorithm, decodedAsBase64Key, ivArr);
         let decrypted = cipher.update(cipherTextArr, 'binary', 'utf8');
         decrypted += cipher.final('utf8');
 
@@ -35,7 +31,6 @@ class Crypto {
     }
 };
 
-//console.log(decrypt("86PVqXRrfJtHqjBNazWrZ4c8Zpcn+ypu6NOcXfY6FlKNNC4hJEgexiJdNrZrzi3g6HIFDp65zQ==", "3e$C!F)H@McQfTjK"));
 
 
 export default Crypto;
