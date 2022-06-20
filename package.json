@@ -1,0 +1,15 @@
+{
+  "name": "secured-storage",
+  "version": "1.0.0",
+  "description": "This is a secure way of storing key value in the browser based on localstorage and with military-grade encryption.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gerardo Flores",
+  "license": "ISC",
+  "dependencies": {
+    "crypto": "^1.0.1"
+  }
+}
