@@ -11,5 +11,14 @@
   "license": "ISC",
   "dependencies": {
     "crypto": "^1.0.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gerardofloresdev/SecuredStorage.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gerardofloresdev/SecuredStorage/issues"
+  },
+  "homepage": "https://github.com/gerardofloresdev/SecuredStorage#readme"
 }
