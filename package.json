@@ -1,6 +1,6 @@
 {
   "name": "secured-storage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is a secure way of storing key value in the browser based on localstorage and with military-grade encryption.",
   "main": "index.js",
   "type": "module",
