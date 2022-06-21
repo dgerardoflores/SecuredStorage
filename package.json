@@ -10,7 +10,7 @@
   "author": "Gerardo Flores",
   "license": "ISC",
   "dependencies": {
-    "crypto": "^1.0.1"
+    "crypto": "^1.0.2"
   },
   "devDependencies": {},
   "repository": {
