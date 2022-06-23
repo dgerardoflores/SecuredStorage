@@ -21,3 +21,17 @@ Has it happened to you that you want to save sensitive data at the frontend leve
 ## What is the operation?
 
 To encrypt the information, AES of the CTR No Padding type is used, which is approved as part of the OWASP standards as a secure encryption algorithm, then it is saved to localStorage or sessionStorage depending on how you configure it in key/value format, for which the key is encrypted in MD5 and the value in AES CRT No Padding
+
+## How to install it?
+
+### npm (recommended)
+
+```bash
+$ npm i secured-storage --save
+```
+
+### yarn
+
+```bash
+$ yarn add secured-storage
+```
