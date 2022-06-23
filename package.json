@@ -10,9 +10,9 @@
   "author": "Gerardo Flores",
   "license": "ISC",
   "dependencies": {
+    "blueimp-md5": "^2.19.0",
     "crypto": "^1.0.1"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gerardofloresdev/SecuredStorage.git"
