@@ -17,3 +17,7 @@
 ## What is secure storage and why should we use it?
 
 Has it happened to you that you want to save sensitive data at the frontend level? Or you do not want information that we commonly store in localstorage or sessionstorage to be intercepted by the user or even by attackers, because due to these problems we have decided to create a plugin to allow secure storage in a very simple way, where you will no longer have to worry about encryption, keys, etc.
+
+## What is the operation?
+
+To encrypt the information, AES of the CTR No Padding type is used, which is approved as part of the OWASP standards as a secure encryption algorithm, then it is saved to localStorage or sessionStorage depending on how you configure it in key/value format, for which the key is encrypted in MD5 and the value in AES CRT No Padding
