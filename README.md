@@ -35,3 +35,15 @@ $ npm i secured-storage --save
 ```bash
 $ yarn add secured-storage
 ```
+
+## How is it used?
+
+### Initialization
+
+We can initialize the library with the following code:
+
+```js
+import { SecuredStorage } from 'secured-storage';
+
+SecuredStorage.initalize();
+```
