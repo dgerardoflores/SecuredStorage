@@ -35,7 +35,11 @@ class Crypto {
 
         window.crypto.getRandomValues(arr);
 
-        return Array.from(arr, dec2hex).join('')
+        return Array.from(arr, Crypto.dec2hex).join('')
+    }
+
+    static dec2hex(dec) {
+        return dec.toString(16).padStart(2, "0")
     }
 };
 

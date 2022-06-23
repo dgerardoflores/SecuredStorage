@@ -5,11 +5,11 @@ class Storage {
 
         switch (type) {
             case TypesStorages.LOCAL_STORAGE:
-                localStorage.setItem(newKey, JSON.stringify(value));
+                localStorage.setItem(newKey, value);
 
                 break;
             case TypesStorages.SESSION_STORAGE:
-                sessionStorage.setItem(newKey, JSON.stringify(value));
+                sessionStorage.setItem(newKey, value);
 
                 break;
             default:
@@ -18,17 +18,23 @@ class Storage {
     }
 
     static get(prefix, key, type) {
+        const newKey = Storage.generateKeyWithPrefix(prefix, key);
+
         switch (type) {
             case TypesStorages.LOCAL_STORAGE:
-                break;
+                return localStorage.getItem(newKey);
             case TypesStorages.SESSION_STORAGE:
-                break;
+                return sessionStorage.getItem(newKey);
             default:
                 throw new Error('An error occurred while choosing the correct storage')
         }
     }
 
     static generateKeyWithPrefix(prefix, key) {
+        if (prefix === null) {
+            return key;
+        }
+
         return prefix + '-' + key;
     }
 }
