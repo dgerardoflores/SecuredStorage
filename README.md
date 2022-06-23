@@ -47,3 +47,25 @@ import { SecuredStorage } from 'secured-storage';
 
 SecuredStorage.initalize();
 ```
+
+### How to encrypt
+
+To save securely you just have to call the "set" function, the first parameter is the key and the second parameter is the value, as shown in the following code example:
+
+```js
+import { SecuredStorage } from 'secured-storage';
+
+SecuredStorage.set("name", "Charlotte Smith");
+```
+
+### How to decrypt
+
+To obtain a value and use the automatic decryption, just call the "get" function and it will return the value automatically
+
+```js
+import { SecuredStorage } from 'secured-storage';
+
+const name = SecuredStorage.get("name");
+
+console.log(name); // Charlotte Smith
+```
