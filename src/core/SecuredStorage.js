@@ -13,12 +13,22 @@ class SecuredStorage {
             data.key = Crypto.randomPassword(16);
         }
 
+        const keyPassowordEncryptedVerification = Storage.get("sapphire", "pwd", TypesStorages.LOCAL_STORAGE);
+
+        if (keyPassowordEncryptedVerification !== null) {
+            console.info("Secured Storage: Secure storage is active");
+
+            return;
+        } else {
+            console.info("Secured Storage: Secured Storage was initialized");
+        }
+
         if (data.prefix === undefined) {
             data.prefix = null;
         }
 
         const keyPrefixEncrypted = Crypto.encrypt(window.navigator.userAgent, data.key);
-        const keyPassowordEncrypted = Crypto.encrypt(window.location.href, data.key);
+        const keyPassowordEncrypted = Crypto.encrypt(window.location.origin, data.key);
 
         Storage.set(null, keyPrefixEncrypted, data.prefix, TypesStorages.LOCAL_STORAGE);
         Storage.set(null, keyPassowordEncrypted, data.key, TypesStorages.LOCAL_STORAGE);
