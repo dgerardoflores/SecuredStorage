@@ -48,7 +48,7 @@ import { SecuredStorage } from 'secured-storage';
 SecuredStorage.initalize();
 ```
 
-### How to encrypt
+### How to encrypt and save
 
 To save securely you just have to call the "set" function, the first parameter is the key and the second parameter is the value, as shown in the following code example:
 
@@ -58,7 +58,7 @@ import { SecuredStorage } from 'secured-storage';
 SecuredStorage.set("name", "Charlotte Smith");
 ```
 
-### How to decrypt
+### How to decrypt and retrieve
 
 To obtain a value and use the automatic decryption, just call the "get" function and it will return the value automatically
 
@@ -68,4 +68,24 @@ import { SecuredStorage } from 'secured-storage';
 const name = SecuredStorage.get("name");
 
 console.log(name); // Charlotte Smith
+```
+
+### How delete
+
+We can delete a record, specifying the value of its key
+
+```js
+import { SecuredStorage } from 'secured-storage';
+
+SecuredStorage.delete("name"); // This will permanently delete the name attribute
+```
+
+### How to clear all storage
+
+We can clean all the storage with a single command
+
+```js
+import { SecuredStorage } from 'secured-storage';
+
+SecuredStorage.clear(); // This will erase all storage permanently
 ```
