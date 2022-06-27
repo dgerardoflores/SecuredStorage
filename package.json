@@ -9,6 +9,7 @@
   },
   "author": "Gerardo Flores",
   "license": "ISC",
+  "keywords": ["secured_storage", "javascript", "hacking", "security", "Browser's Local Storage", "Browser's Session Storage", "Securing browser's storage", "Encrypting local storage", "asyncstorage", "secure", "storage", "secure storage web"],
   "dependencies": {
     "blueimp-md5": "^2.19.0",
     "crypto": "^1.0.1"
