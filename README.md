@@ -45,7 +45,9 @@ We can initialize the library with the following code:
 ```js
 import { SecuredStorage } from 'secured-storage';
 
-SecuredStorage.initalize();
+SecuredStorage.initalize({
+  key: "r')[4Zkj<X+~^-YH" // The password is optional, if you do not send it, it is automatically generated following the strictest standards
+});
 ```
 
 ### How to encrypt and save
